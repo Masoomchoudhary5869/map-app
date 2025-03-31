@@ -2,12 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bell } from "lucide-react";
 import "./Navbar.css"; 
-
 export default function Navbar() {
   const [isAlertActive, setIsAlertActive] = useState(false);
-
   const toggleAlert = () => setIsAlertActive(!isAlertActive);
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between">
@@ -15,7 +12,6 @@ export default function Navbar() {
         <Link to="/" className="font-bold text-xl">
           Alert
         </Link>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {['Home', 'About', 'Team', 'Contact Us'].map((item) => (
